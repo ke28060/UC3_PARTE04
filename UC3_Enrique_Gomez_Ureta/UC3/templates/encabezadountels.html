@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    {% block title %}
+    {% endblock %} 
+    |Kevin Andre
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+</head>
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'imagenes/logo.jpg' %}" />
+        </div>
+    </header>
+        <nav>
+            <ul>
+                <li >
+                    <a  aria-current="page" href="#" style="color: #037ccc;">Inicio</a>
+                </li>
+                <li>
+                    <a  href="#" style="color: #037ccc;">Primos[a,b]</a>
+                </li>
+                <li>
+                    <a href="#" style="color: #037ccc;">Examen</a>
+                </li>
+            </ul>
+                
+                
+                
+              
+          </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+        </div>
+        <div id="content">
+            <div class="box">
+            {% block content %}
+                <strong> Contenido en layout (Padre) </strong>
+            {% endblock %}
+        </div>
+        
+        <footer>
+        UNTELS - Lenguaje de Programación III &copy; kevin Andre - {% now "d/m/Y h:m:s" %}
+            
+        </footer>
+
+
+</body>
+</html>
