@@ -38,3 +38,5 @@ def primos(request, a=1, b=100):
 
     resultado += "</ul>"
     return HttpResponse(resultado)
+def examen(request):
+    return render(request,'examen.html')
