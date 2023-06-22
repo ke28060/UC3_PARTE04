@@ -1,0 +1,12 @@
+<br>
+<hr>
+<br>
+
+<p> <strong> {{encabezado}} (Método 02: Imprime lista utilizando for): </strong> </p>
+<ul>
+    {% for estudiante in  estudiantes %}
+        <li>{{forloop.counter}}. {{estudiante}}</li>
+    {% empty %}
+        <p> No hay {{encabezado}} </p>
+    {% endfor %}
+</ul>
